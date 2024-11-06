@@ -13,6 +13,11 @@ jabledl -f "/tmp/jable-video.html"
 ## Dependency
 
 jabledl depends on [FFmpeg](https://www.ffmpeg.org/) to convert MPEG2-TS file to MP4.
+you have to make sure that ffmpeg is installed before you run jablel
+for example on Ubuntu
+```
+sudo apt install ffmpeg
+```
 
 ## Install
 
