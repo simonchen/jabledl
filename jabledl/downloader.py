@@ -8,7 +8,7 @@ class Downloader:
     def __init__(self, segments, request_headers, requests_callback):
         self.threads           = []
         self.threads_count     = 0
-        self.threads_limit     = 50
+        self.threads_limit     = 10
 
         self.segments          = segments
         self.segments_count    = len(segments)

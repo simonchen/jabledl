@@ -34,7 +34,8 @@ class Video:
 
 
     def get_metadata(self):
-        self.html = requests.get(self.url, headers = self.requests_headers).text
+        self.html = open(self.url, 'r').read() #requests.get(self.url, headers = self.requests_headers).text
+        #print(self.html)
         self.soup = BeautifulSoup(self.html, 'html.parser')
 
         self.get_car_number()
@@ -49,7 +50,9 @@ class Video:
 
 
     def get_car_number(self):
-        self.car_number = self.soup.title.text.split(' ')[0].upper()
+        arr = self.url.split('.')
+        self.car_number = arr[len(arr)-2] #self.soup.title.text.split(' ')[0].upper()
+        print(self.car_number)
 
 
     def get_m3u8(self):

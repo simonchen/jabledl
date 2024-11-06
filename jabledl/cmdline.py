@@ -25,6 +25,7 @@ With no OPTION and URL, default is interactive mode.
 Options:
     -h, --help  display this help and exit
     -i, --input input the URL, and change into non-interactive mode
+    -f, --file HTML file, the file name will be as final video file name too.
 
 Examples:
     jabledl
@@ -44,7 +45,10 @@ def parse_args():
 
     parser.add_argument('-h', '--help', action = 'help', help = argparse.SUPPRESS)
     parser.add_argument('-i', '--input', help = argparse.SUPPRESS)
+    parser.add_argument('-f', '--file', help = argparse.SUPPRESS)
     args = parser.parse_args()
+
+    if args.file : return args.file
 
     if args.input : print('Enter a Jable video url : ' + args.input) ; return args.input
     else          : return input('Enter a Jable video url : ')
