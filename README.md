@@ -2,9 +2,13 @@
 
 jabledl is a video downloader for Jable TV.
 
-## Screenshot
+## Usage
 
-![](./demo.png)
+the parameter -i (--input) is deprecated.
+instead, you should use -f (--file) to feed the actual video HTML file (you need to manually save as HTML file from web browser)
+```
+jabledl -f "/tmp/jable-video.html"
+````
 
 ## Dependency
 
